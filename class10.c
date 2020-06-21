@@ -5,6 +5,10 @@
 
 int main()
 {
+	/*常用内置函数*/
+
+
+
 	//常用内置函数-0表示假，非0表示真
 
 /*
@@ -60,13 +64,36 @@ int main()
 	printf("%lf的绝对值是：%lf\n", test, fabs(test));
 */
 
+/*
 	printf("这里是普通文字，非常普通！\n");
 	system("color 4E");		//改变背景颜色
 	system("cls");			//清屏——可以做简单的动画效果
 	system("shutdown /r /t 1800");	//1800s后自动关机
 	system("shutdown /a");			//取消自动关机
+*/
 
-
+	//内置函数补充
+	//malloc()		//动态内存分配:编译的时候没有内存，程序运行后，再分配内存
+	//calloc()		使用的时候会初始化数组元素
+	int i;
+	int* ptr_nums;
+	ptr_nums = (int*)malloc(sizeof(int) * 5);	//为前面的指针动态分配了20个字节的空间
+	//ptr_nums = calloc(5, sizeof(int));
+	//等价于：int nums[5]
+	//尾指针动态分配空间后，指针就变成了数组
+	
+	for (i = 0; i < 5; i++)
+	{
+		printf("请输入第%d个元素：", i + 1);
+		scanf_s("%d", ptr_nums + i);
+	}
+	printf("数组元素为：\n");
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d\t", *(ptr_nums + i));
+	}
+	free(ptr_nums);	//释放动态分配的内存
+	ptr_nums = NULL;	//良好的编程习惯
 
 
 	return 0;
