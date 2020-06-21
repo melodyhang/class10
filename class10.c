@@ -75,6 +75,7 @@ int main()
 	//内置函数补充
 	//malloc()		//动态内存分配:编译的时候没有内存，程序运行后，再分配内存
 	//calloc()		使用的时候会初始化数组元素
+/*
 	int i;
 	int* ptr_nums;
 	ptr_nums = (int*)malloc(sizeof(int) * 5);	//为前面的指针动态分配了20个字节的空间
@@ -94,7 +95,6 @@ int main()
 	}
 	free(ptr_nums);	//释放动态分配的内存
 	ptr_nums = NULL;	//良好的编程习惯
-
-
+*/
 	return 0;
 }
