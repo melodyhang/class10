@@ -1,10 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
+#include<math.h>
 
 int main()
 {
 	//常用内置函数-0表示假，非0表示真
+
+/*
 	printf("%d\n", isupper('a'));
 	printf("%d\n", islower('a'));
 	printf("%d\n", isalpha('-'));	//返回的字符是否为字母
@@ -12,8 +15,9 @@ int main()
 	printf("%d\n", isdigit(9));		//返回的字符是否为数字
 	//转换大小写
 	printf("大写：%c", toupper('9'));
+*/
 
-
+/*
 	//思考题：如何将用户输入的小写数字持转成中文大写？
 	int money;
 	int	count = 0;
@@ -37,6 +41,7 @@ int main()
 		printf("%d-%s\n", moneys[i], unit[moneys[i]]);
 
 	}
+*/
 
 /*
 	int i;
@@ -47,6 +52,22 @@ int main()
 	}
 */
 
-	
+
+/*
+	//ceil - 进一法		floor - 去尾法
+	//如果是负数，规律相反
+	double test = -789.567;
+	printf("%lf的绝对值是：%lf\n", test, fabs(test));
+*/
+
+	printf("这里是普通文字，非常普通！\n");
+	system("color 4E");		//改变背景颜色
+	system("cls");			//清屏——可以做简单的动画效果
+	system("shutdown /r /t 1800");	//1800s后自动关机
+	system("shutdown /a");			//取消自动关机
+
+
+
+
 	return 0;
 }
