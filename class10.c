@@ -3,14 +3,58 @@
 #include<ctype.h>
 #include<math.h>
 
+//函数原型
+void calcCircle();	//计算圆的面积
+void calcRectangle();	//计算矩形的面积
+int calcSum();		//求1-100之间的偶数和
+
+
+
+
 //计算圆的面积（函数实现）
 void calcCircle()
 {
 	double radius;
+	double s;
 	printf("请输入圆的半径：");
 	scanf_s("%lf", &radius);
-	s=3.15
+	s = 3.14 * pow(radius, 2);
+	printf("半径为%.2lf的圆面积为：%.2lf\n", radius, s);
 }
+//计算矩形的面积（函数实现）
+void calcRectangle()
+{
+	double width, height;
+	double s;
+	if (width <= 0 || height <= 0)
+	{
+		printf("宽和高不能未负数，你耍老娘呢！！！\n");
+		return;
+	}
+	printf("请输入矩形的宽和高：");
+	scanf_s("%lf%lf", &width, &height);
+	s = width * height;
+	printf("矩形的面积为：%.2lf", s);
+}
+int calcSum()
+{
+	//1-100之间的偶数和
+	int sum = 0;
+	int i = 1;
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 2 == 0)
+		{
+			sum += i;
+		}
+	}
+	//将计算好的结果返回
+	return sum;
+}
+
+
+
+
 int main()
 {
 	/*常用内置函数*/
@@ -119,6 +163,16 @@ int main()
 	//需要返回值吗?
 	//函数名是什么？
 	//需要给这个函数参数吗？
+	//calcCircle();	//调用计算圆面积的函数
+	//calcRectangle();	//调用计算矩形面积的函数
 
+
+	//如果函数有返回值，调用时，记得使用对应它类型的变量来接收
+	int sum1 = calcSum();
+	printf("1-100之间的偶数和是：%d", sum1);
+
+
+
+	//作为一个程序员，要学会偷懒
 	return 0;
 }
