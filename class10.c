@@ -26,13 +26,13 @@ void calcRectangle()
 {
 	double width, height;
 	double s;
+	printf("请输入矩形的宽和高：");
+	scanf_s("%lf%lf", &width, &height);
 	if (width <= 0 || height <= 0)
 	{
 		printf("宽和高不能未负数，你耍老娘呢！！！\n");
 		return;
 	}
-	printf("请输入矩形的宽和高：");
-	scanf_s("%lf%lf", &width, &height);
 	s = width * height;
 	printf("矩形的面积为：%.2lf", s);
 }
