@@ -7,7 +7,38 @@
 void calcCircle();	//计算圆的面积
 void calcRectangle();	//计算矩形的面积
 int calcSum();		//求1-100之间的偶数和
+/*
+书写函数实现数组元素的查找，要求返回找到的元素下标
+书写函数实现冒泡排序并返回排序后的数组
+书写函数要求用户输入密码（6位，错误则重新输入），返回并打印用户输入的正确密码
+*/
 
+
+//书写函数实现数组元素的查找，要求返回找到的元素下标
+int search();
+//书写函数实现冒泡排序并返回排序后的数组
+double sort[]();
+//书写函数要求用户输入密码（6位，错误则重新输入），返回并打印用户输入的正确密码
+char* password();
+
+int search()
+{
+	int i;
+	int nums[] = { 34,56,78,3,2 };
+	int searchNum, searchIndex = -1;	//
+	printf("请输入要查找的整型数字：");
+	scanf_s("%d", &searchNum);
+	for (i = 0; i < 5; i++)
+	{
+		if (searchNum == *(nums + i))
+		{
+			searchIndex = i;
+			//return searchNum;
+			break;
+		}
+	}
+	return searchNum;
+}
 
 
 
@@ -168,10 +199,13 @@ int main()
 
 
 	//如果函数有返回值，调用时，记得使用对应它类型的变量来接收
-	int sum1 = calcSum();
-	printf("1-100之间的偶数和是：%d", sum1);
+	
+	//int sum1 = calcSum();
+	//printf("1-100之间的偶数和是：%d", sum1);
 
 
+	int indes = search();
+	printf("%d", indes);
 
 	//作为一个程序员，要学会偷懒
 	return 0;
